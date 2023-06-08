@@ -134,6 +134,8 @@ const Chat = ({ setLoading }) => {
           description: `${result.data}`,
           message: '',
         });
+        setFileArray([]);
+        localStorage.removeItem('fileArray');
       })
       .catch((error) => {
         console.log('Emb = ', error);
